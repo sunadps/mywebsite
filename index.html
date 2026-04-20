@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+<meta name="googlebot" content="noindex, nofollow" />
+<meta name="referrer" content="no-referrer" />
+<title>Sunad P. S. Bhat — Residential PV Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f172a;
+    --paper:#f8fafc;
+    --rule:#cbd5e1;
+    --muted:#64748b;
+    --accent:#facc15;
+    --accent-ink:#0f172a;
+    --mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --display:"Space Grotesk", Helvetica, Arial, sans-serif;
+    --body:"Inter", Helvetica, Arial, sans-serif;
+  }
+  [data-theme="dark"]{
+    --ink:#f1f5f9;
+    --paper:#0b1220;
+    --rule:#22324d;
+    --muted:#94a3b8;
+    --accent:#facc15;
+    --accent-ink:#0b1220;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--body);}
+  body{transition:background .25s ease,color .25s ease;}
+  a{color:inherit}
+  ::selection{background:var(--accent);color:var(--accent-ink)}
+
+  /* theme toggle (top right) */
+  .theme-toggle{
+    position:fixed;top:20px;right:20px;z-index:60;
+    display:inline-flex;align-items:center;gap:10px;padding:8px 14px;
+    border:1px solid var(--rule);border-radius:999px;background:color-mix(in oklab,var(--paper) 85%,transparent);
+    backdrop-filter:blur(10px);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);
+    cursor:pointer;
+  }
+  .theme-toggle .dot{width:10px;height:10px;border-radius:999px;background:var(--accent)}
+
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:5px 10px;border:1px solid var(--rule);border-radius:999px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .pill .status{width:6px;height:6px;border-radius:999px;background:#22c55e;box-shadow:0 0 0 3px color-mix(in oklab, #22c55e 25%, transparent)}
+  .kbd{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+  /* ============ BLUEPRINT ============ */
+  .v1{
+    --grid: color-mix(in oklab, var(--ink) 8%, transparent);
+    --grid-bold: color-mix(in oklab, var(--ink) 16%, transparent);
+    background:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(to right, var(--grid-bold) 1px, transparent 1px) 0 0 / 200px 200px,
+      linear-gradient(to bottom, var(--grid-bold) 1px, transparent 1px) 0 0 / 200px 200px,
+      var(--paper);
+    color:var(--ink);
+  }
+  .v1 .sheet{ max-width:1240px;margin:0 auto;padding:40px 56px 56px;position:relative; }
+  .v1 .title-block{
+    border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);
+    padding:24px 0 20px;
+    display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:24px;
+    font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  }
+  .v1 .title-block b{display:block;color:var(--ink);font-weight:600;margin-top:4px;letter-spacing:.04em}
+  .v1 .hero{
+    padding:56px 0 32px;display:grid;grid-template-columns:1.3fr .9fr;gap:48px;align-items:end;border-bottom:1px solid var(--rule);
+  }
+  .v1 h1{
+    font-family:var(--display);font-weight:500;
+    font-size:clamp(48px,6.4vw,96px);line-height:.95;letter-spacing:-.02em;margin:0;
+  }
+  .v1 h1 em{font-style:normal;color:var(--muted);font-weight:400}
+  .v1 h1 .amber{background:linear-gradient(0deg,var(--accent) 38%,transparent 38%);padding:0 .1em}
+  .v1 .lede{font-size:15px;line-height:1.55;color:var(--muted);max-width:40ch}
+  .v1 .lede b{color:var(--ink);font-weight:500}
+
+  .v1 .meta-row{ display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--rule); }
+  .v1 .meta-row > div{
+    padding:22px 22px 22px 0;border-right:1px dashed var(--rule);
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  }
+  .v1 .meta-row > div:last-child{border-right:0;padding-right:0}
+  .v1 .meta-row > div span{padding-left:22px}
+  .v1 .meta-row .big{
+    display:block;font-family:var(--display);font-size:42px;line-height:1;color:var(--ink);letter-spacing:-.01em;margin-top:10px;padding-left:22px;font-weight:500;text-transform:none;
+  }
+
+  .v1 .services{ padding:48px 0 0;display:grid;grid-template-columns:280px 1fr;gap:48px; }
+  .v1 .services h2{font-family:var(--display);font-size:32px;margin:8px 0 0;font-weight:500;letter-spacing:-.015em;line-height:1.05}
+  .v1 .svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)}
+  .v1 .svc{
+    background:var(--paper);padding:28px 26px;display:flex;flex-direction:column;gap:10px;min-height:200px;position:relative;
+  }
+  .v1 .svc .num{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.12em}
+  .v1 .svc h3{font-family:var(--display);font-size:22px;line-height:1.15;margin:0;font-weight:500;letter-spacing:-.01em}
+  .v1 .svc p{font-size:13.5px;line-height:1.55;color:var(--muted);margin:0}
+  .v1 .svc .tag{margin-top:auto;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+  .v1 .diagram{
+    margin-top:56px;border:1px solid var(--rule);padding:28px;position:relative;background:color-mix(in oklab, var(--paper) 92%, transparent);
+  }
+  .v1 .diagram .cap{position:absolute;top:-10px;left:20px;background:var(--paper);padding:0 10px;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+  .v1 .process{ display:grid;grid-template-columns:repeat(4,1fr);gap:0; }
+  .v1 .stage{ padding:14px 18px 14px 0;border-right:1px dashed var(--rule); }
+  .v1 .stage:last-child{border-right:0}
+  .v1 .stage .n{font-family:var(--mono);font-size:11px;color:var(--accent-ink);background:var(--accent);padding:3px 7px;border-radius:3px;letter-spacing:.08em;display:inline-block}
+  .v1 .stage h4{font-family:var(--display);font-weight:500;font-size:17px;margin:12px 0 4px;letter-spacing:-.01em}
+  .v1 .stage p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.5}
+
+  /* contact */
+  .contact{ margin-top:72px;padding:56px 0 40px;border-top:1px solid var(--rule); }
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+  .contact h2{
+    font-family:var(--display);font-weight:500;font-size:clamp(36px,4vw,56px);line-height:1;letter-spacing:-.02em;margin:0 0 14px;
+  }
+  .contact .intro{font-family:var(--body);font-size:15px;line-height:1.55;color:var(--muted);max-width:40ch;margin:0 0 28px}
+  .contact .intro b{color:var(--ink);font-weight:500}
+  .contact .coords{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;line-height:2;border-top:1px solid var(--rule);padding-top:16px}
+  .contact .coords b{color:var(--ink);font-weight:500}
+  .contact .coords .row{display:flex;justify-content:space-between;border-bottom:1px dashed var(--rule);padding:6px 0}
+  .contact .coords .row:last-child{border-bottom:0}
+
+  form .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  form label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  form .req{color:#ef4444;margin-left:4px}
+  form .field{margin-bottom:18px}
+  form .field.full{grid-column:1/-1}
+  form input,form select,form textarea{
+    width:100%;appearance:none;-webkit-appearance:none;
+    background:transparent;color:var(--ink);font:500 14px/1.4 var(--body);
+    border:0;border-bottom:1px solid var(--rule);
+    padding:10px 0;border-radius:0;outline:none;
+    transition:border-color .2s ease;
+  }
+  form textarea{min-height:96px;resize:vertical;font-family:var(--body)}
+  form input:focus,form select:focus,form textarea:focus{border-bottom-color:var(--ink)}
+  form input::placeholder,form textarea::placeholder{color:var(--muted);opacity:.7}
+  form .scope{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  form .chk{
+    display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--rule);cursor:pointer;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    user-select:none;transition:all .15s ease;
+  }
+  form .chk input{display:none}
+  form .chk .box{width:12px;height:12px;border:1px solid var(--rule);display:inline-block;position:relative}
+  form .chk.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  form .chk.on .box{background:var(--accent);border-color:var(--accent)}
+  form .chk.on .box::after{content:"";position:absolute;inset:2px;background:var(--accent-ink);clip-path:polygon(20% 50%,40% 70%,80% 20%,85% 25%,42% 82%,18% 55%)}
+  form .err{color:#ef4444;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;margin-top:4px;display:none}
+  form .field.bad .err{display:block}
+  form .field.bad input,form .field.bad select,form .field.bad textarea{border-bottom-color:#ef4444}
+  form button.submit{
+    margin-top:10px;appearance:none;border:0;cursor:pointer;
+    background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    padding:18px 26px;display:inline-flex;align-items:center;gap:14px;transition:transform .15s ease;
+  }
+  form button.submit:hover{transform:translateY(-1px)}
+  form button.submit .arr{display:inline-block;transition:transform .2s ease}
+  form button.submit:hover .arr{transform:translateX(4px)}
+  .success{ display:none;border:1px solid var(--ink);padding:28px;position:relative; }
+  .success.on{display:block;animation:popIn .35s ease both}
+  .success h3{font-family:var(--display);font-size:24px;margin:0 0 6px;font-weight:500;letter-spacing:-.01em}
+  .success p{font-family:var(--body);font-size:14px;line-height:1.55;color:var(--muted);margin:0}
+  .success .stamp{
+    position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    border:1px solid var(--accent);color:var(--ink);padding:4px 8px;background:var(--accent);
+  }
+  @keyframes popIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .fade-up{opacity:0;transform:translateY(10px);animation:fu .7s cubic-bezier(.2,.7,.2,1) .05s forwards}
+  .fade-up.d1{animation-delay:.15s}
+  .fade-up.d2{animation-delay:.25s}
+  .fade-up.d3{animation-delay:.35s}
+  @keyframes fu{to{opacity:1;transform:none}}
+
+  .microfoot{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+    display:flex;justify-content:space-between;padding:28px 0 0;border-top:1px solid var(--rule);margin-top:56px;
+  }
+
+  @media (max-width:780px){
+    .v1 .sheet{padding:72px 24px 32px}
+    .v1 .hero{grid-template-columns:1fr;gap:24px}
+    .v1 .title-block{grid-template-columns:1fr 1fr;gap:16px}
+    .v1 .meta-row{grid-template-columns:1fr 1fr}
+    .v1 .meta-row > div{border-right:0;border-bottom:1px dashed var(--rule)}
+    .v1 .services{grid-template-columns:1fr;gap:24px}
+    .v1 .svc-grid{grid-template-columns:1fr}
+    .v1 .process{grid-template-columns:1fr 1fr;gap:20px 0}
+    .v1 .stage{border-right:0}
+    .contact-grid{grid-template-columns:1fr;gap:40px}
+    form .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<button class="theme-toggle" id="themeBtn" title="Toggle theme"><span class="dot"></span><span id="themeLabel">Dark</span></button>
+
+<section class="v1">
+  <div class="sheet">
+    <div class="title-block fade-up">
+      <div>PROJECT<b>Residential PV Engineering Services</b></div>
+      <div>SHEET<b>A-000 / Capabilities</b></div>
+      <div>REV<b>2026.04</b></div>
+      <div>DRAWN BY<b>Sunad P. S. Bhat</b></div>
+    </div>
+
+    <div class="hero">
+      <div>
+        <div class="pill fade-up"><span class="status"></span>Taking on Q2 pipeline — 4 slots open</div>
+        <h1 class="fade-up d1" style="margin-top:22px">
+          Residential solar<br/>
+          designed <em>to</em> <span class="amber">spec</span>,<br/>
+          reviewed <em>to</em> code.
+        </h1>
+      </div>
+      <p class="lede fade-up d2">
+        Independent engineering consultant for US residential PV pipelines.
+        <b>Permit-ready plansets, QA/QC on third-party designs, NEC &amp; AHJ compliance,</b> and automation tooling that makes your internal engineering templates faster and more reliable.
+      </p>
+    </div>
+
+    <div class="meta-row fade-up d3">
+      <div>Years designing<span class="big">07</span><span>Residential PV, US-wide</span></div>
+      <div>Prior<span class="big">T / PS / FF</span><span>Tesla · Project Solar · Freedom Forever</span></div>
+      <div>Throughput<span class="big">~140/mo</span><span>Plansets &amp; QC reviews</span></div>
+      <div>Tooling<span class="big">Automated</span><span>Template pipelines, in-house scripts</span></div>
+    </div>
+
+    <section class="services">
+      <div>
+        <div class="kbd">§ 02</div>
+        <h2>Scope of<br/>engagement</h2>
+        <p style="color:var(--muted);font-size:13px;line-height:1.55;margin-top:12px">Engage per-project, per-batch, or on a monthly retainer. Turnaround is typically <b style="color:var(--ink)">24–72 hours</b> on plansets.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc">
+          <span class="num">S-01</span>
+          <h3>PV system design &amp; permit plansets</h3>
+          <p>Site plan, single-line, placards, string configuration, BOM. Issued stamped or unstamped, ready for AHJ submittal.</p>
+          <span class="tag">→ 24–72 hr turnaround</span>
+        </div>
+        <div class="svc">
+          <span class="num">S-02</span>
+          <h3>QA / QC on third-party designs</h3>
+          <p>Independent review for string sizing, conductor ampacity, rooftop attachment, labeling, and AHJ conventions before submittal.</p>
+          <span class="tag">→ Per-project or batch</span>
+        </div>
+        <div class="svc">
+          <span class="num">S-03</span>
+          <h3>NEC &amp; AHJ code compliance</h3>
+          <p>2017 / 2020 / 2023 NEC reviews, local amendments, utility interconnection quirks. I maintain a live AHJ notes library.</p>
+          <span class="tag">→ Retainer available</span>
+        </div>
+        <div class="svc">
+          <span class="num">S-04</span>
+          <h3>Site audits &amp; as-built reviews</h3>
+          <p>Comparing as-built vs. permitted scope, flagging deltas, generating correction plansets for re-inspection.</p>
+          <span class="tag">→ Remote or dispatch</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="diagram">
+      <span class="cap">Fig. 01 — Engagement flow</span>
+      <div class="process">
+        <div class="stage"><span class="n">01</span><h4>Intake</h4><p>Site data, utility, AHJ, scope sheet. Clarify deliverable format.</p></div>
+        <div class="stage"><span class="n">02</span><h4>Design / review</h4><p>Planset drafted or third-party design audited against spec matrix.</p></div>
+        <div class="stage"><span class="n">03</span><h4>Internal QC</h4><p>Two-pass check: string math, then code &amp; AHJ conventions.</p></div>
+        <div class="stage"><span class="n">04</span><h4>Handoff</h4><p>Issued PDF + editable source, plus change log for revisions.</p></div>
+      </div>
+    </div>
+
+    <section class="contact">
+      <div class="contact-grid">
+        <div>
+          <div class="kbd" style="margin-bottom:12px">§ 03 — Intake</div>
+          <h2>Start a project.</h2>
+          <p class="intro"><b>Send a scope sheet or just a sentence.</b> I respond within one business day with availability, pricing, and any clarifying questions. No gatekeeping.</p>
+          <div class="coords">
+            <div class="row"><span>Based</span><b>North Carolina, USA</b></div>
+            <div class="row"><span>Email</span><b>sunad@bhat.engineering</b></div>
+            <div class="row"><span>Hours</span><b>Mon–Fri · 09–18 ET</b></div>
+            <div class="row"><span>Response</span><b>&lt; 24 hrs</b></div>
+          </div>
+        </div>
+        <div>
+          <form class="intake-form" novalidate>
+            <div class="grid">
+              <div class="field"><label>Name<span class="req">*</span></label><input name="name" placeholder="Your name" required/><div class="err">Required</div></div>
+              <div class="field"><label>Company</label><input name="company" placeholder="EPC / installer"/></div>
+            </div>
+            <div class="grid">
+              <div class="field"><label>Email<span class="req">*</span></label><input name="email" type="email" placeholder="you@company.com" required/><div class="err">Valid email required</div></div>
+              <div class="field">
+                <label>Monthly volume</label>
+                <select name="volume">
+                  <option value="">Select…</option>
+                  <option>&lt; 20 projects / mo</option>
+                  <option>20–80 projects / mo</option>
+                  <option>80–200 projects / mo</option>
+                  <option>200+ projects / mo</option>
+                </select>
+              </div>
+            </div>
+            <div class="field full">
+              <label>Scope <span style="text-transform:none;letter-spacing:0;font-family:var(--body)">(pick any)</span></label>
+              <div class="scope">
+                <label class="chk"><input type="checkbox" name="scope" value="design"/><span class="box"></span>Plansets</label>
+                <label class="chk"><input type="checkbox" name="scope" value="qc"/><span class="box"></span>QA / QC review</label>
+                <label class="chk"><input type="checkbox" name="scope" value="code"/><span class="box"></span>Code Review / AHJ Review</label>
+                <label class="chk"><input type="checkbox" name="scope" value="audit"/><span class="box"></span>Site / as-built audit</label>
+              </div>
+            </div>
+            <div class="field full"><label>Project notes<span class="req">*</span></label><textarea name="notes" placeholder="States, typical system size, inverter brands, timeline…" required></textarea><div class="err">Tell me a little</div></div>
+            <button type="submit" class="submit">Send intake <span class="arr">→</span></button>
+          </form>
+          <div class="success" role="status"><span class="stamp">Received</span><h3>Scope received — logged.</h3><p>I'll reply from <b>sunad@bhat.engineering</b> within one business day with availability, pricing, and any clarifying questions.</p></div>
+        </div>
+      </div>
+      <div class="microfoot"><span>© 2026 · Sunad P. S. Bhat · All drawings are the property of their respective clients</span><span>Sheet A-000 · Rev 2026.04</span></div>
+    </section>
+  </div>
+</section>
+
+<script>
+(() => {
+  const themeBtn = document.getElementById('themeBtn');
+  const themeLabel = document.getElementById('themeLabel');
+  function setTheme(t){
+    document.body.dataset.theme = t;
+    themeLabel.textContent = t === 'dark' ? 'Dark' : 'Light';
+    try { localStorage.setItem('bhat.theme', t); } catch(e){}
+  }
+  themeBtn.addEventListener('click', () => setTheme(document.body.dataset.theme === 'dark' ? 'light' : 'dark'));
+  try { const t = localStorage.getItem('bhat.theme'); if (t) setTheme(t); } catch(e){}
+
+  // scope chips
+  document.querySelectorAll('.chk input').forEach(i => {
+    i.addEventListener('change', e => e.target.closest('.chk').classList.toggle('on', e.target.checked));
+  });
+
+  // form validation
+  document.querySelectorAll('form.intake-form').forEach(form => {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let ok = true;
+      form.querySelectorAll('[required]').forEach(el => {
+        const field = el.closest('.field');
+        const bad = !el.value.trim() || (el.type==='email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value));
+        field.classList.toggle('bad', bad);
+        if (bad) ok = false;
+      });
+      if (!ok) return;
+      const success = form.parentElement.querySelector('.success');
+      form.style.display = 'none';
+      success.classList.add('on');
+    });
+    form.querySelectorAll('input,select,textarea').forEach(el => {
+      el.addEventListener('input', () => el.closest('.field')?.classList.remove('bad'));
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
